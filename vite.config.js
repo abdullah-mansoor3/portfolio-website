@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => ({
   plugins: [react()],
   // Use '/' for development ('serve'), '/portfolio-website/' for production build
-  base: command === 'serve' ? '/' : '/portfolio-website/',
+  base: '/',
   build: {
     target: 'es2020',
     minify: 'terser',
