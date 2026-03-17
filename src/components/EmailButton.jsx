@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const EmailButton = ({ text = "abdullah.binmansoor4@gmail.com", subject = "Project Inquiry", className = "btn-primary", style = {}, onClickWrapper }) => {
   const [copied, setCopied] = useState(false);
   const email = "abdullah.binmansoor4@gmail.com";
+  const navigate = useNavigate();
 
   const handleCopy = (e) => {
     e.preventDefault();
@@ -11,17 +13,25 @@ const EmailButton = ({ text = "abdullah.binmansoor4@gmail.com", subject = "Proje
     
     if (onClickWrapper) onClickWrapper();
 
-    // Redirect to email client after a short delay so they see the copied message
+    // Trigger shockwave effect
+    const shockwave = document.createElement('div');
+    shockwave.className = 'shockwave';
+    shockwave.style.left = `${e.clientX}px`;
+    shockwave.style.top = `${e.clientY}px`;
+    document.body.appendChild(shockwave);
+
+    // Redirect to /book-a-call and clean up shockwave
     setTimeout(() => {
       setCopied(false);
-      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-    }, 1500);
+      shockwave.remove();
+      navigate('/book-a-call', { state: { subject } });
+    }, 600);
   };
 
   return (
-    <a href={`mailto:${email}?subject=${encodeURIComponent(subject)}`} className={className} style={style} onClick={handleCopy}>
+    <button className={className} style={{...style, border: 'none', fontFamily: 'inherit', fontSize: 'inherit'}} onClick={handleCopy}>
       {copied ? "Email Copied! 📋" : text}
-    </a>
+    </button>
   );
 };
 

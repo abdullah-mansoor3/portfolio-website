@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import EmailButton from '../components/EmailButton';
 import './Services.css';
 
 const Services = () => {
@@ -167,9 +168,7 @@ const Services = () => {
           <p>
             If you have an idea or problem you want to solve with AI or automation, feel free to reach out. I’m happy to discuss the project and suggest the best approach.
           </p>
-          <a href="mailto:abdullah.binmansoor4@gmail.com?subject=Project Inquiry" className="btn-primary pulse" style={{ marginTop: "2rem" }}>
-            Contact Me
-          </a>
+          <EmailButton className="btn-primary pulse" style={{ marginTop: "2rem" }} subject="Project Inquiry" text="Contact Me" />
         </div>
       </section>
     </div>

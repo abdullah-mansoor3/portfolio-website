@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import EmailButton from '../components/EmailButton';
 import './Home.css';
 
 const Home = () => {
@@ -59,9 +60,7 @@ const Home = () => {
             </div>
           </div>
           <div className="btn-container" style={{ marginTop: '2rem', textAlign: 'center' }}>
-            <a href="mailto:abdullah.binmansoor4@gmail.com?subject=Inquiry to Book a Call" className="btn-primary pulse">
-              Book a Strategy Call Now
-            </a>
+            <EmailButton className="btn-primary pulse" subject="Inquiry to Book a Call" text="Book a Strategy Call Now" />
           </div>
         </div>
       </section>
@@ -112,9 +111,7 @@ const Home = () => {
              <a href="https://www.upwork.com/freelancers/~01107fc9d26d862654" target="_blank" rel="noreferrer">Upwork</a> |
              <a href="https://www.fiverr.com/s/yvPEoNZ" target="_blank" rel="noreferrer">Fiverr</a>
           </div>
-          <a href="mailto:abdullah.binmansoor4@gmail.com?subject=Project Inquiry" className="btn-primary">
-            Email Me: abdullah.binmansoor4@gmail.com
-          </a>
+          <EmailButton className="btn-primary" subject="Project Inquiry" text="Email Me: abdullah.binmansoor4@gmail.com" />
         </div>
       </section>
     </div>

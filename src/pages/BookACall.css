@@ -1,0 +1,13 @@
+.book-a-call-page {
+  /* Add any specific styles here */
+}
+
+/* Animations and tweaks specific to BookACall page */
+.email-template-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.email-template-container:hover {
+  transform: translateY(-5px);
+}

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './Projects.css';
+import EmailButton from '../components/EmailButton';
 
 const Projects = () => {
   useEffect(() => {
@@ -110,6 +111,16 @@ const Projects = () => {
                </div>
              </div>
           </div>
+        </section>
+
+
+        {/* Call to Action Section */}
+        <section className="project-detail" style={{ textAlign: 'center', marginTop: '4rem', padding: '3rem', background: 'var(--bg-secondary)', borderRadius: '12px' }}>
+          <h2 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>Ready to Build Your Next AI Solution?</h2>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+            Whether you need a custom LLM agent, a computer vision pipeline, or a full-stack AI application, let's discuss how we can turn your ideas into reality.
+          </p>
+          <EmailButton className="btn-primary pulse" subject="Project Inquiry from Portfolio" text="Book a Strategy Call Now" />
         </section>
 
       </div>
