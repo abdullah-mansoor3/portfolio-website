@@ -1,0 +1,23 @@
+.contact-page {
+  text-align: center;
+  padding-top: 120px !important;
+  background: radial-gradient(circle at 50% 0%, #1e3a8a22 0%, var(--bg-primary) 50%);
+}
+
+.contact-options {
+  margin-top: 2rem;
+}
+
+.social-links a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.1);
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+  color: white !important;
+}
